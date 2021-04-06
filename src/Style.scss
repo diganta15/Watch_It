@@ -172,9 +172,10 @@
 }
 .showcase-bottom{
     margin-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    
+    
 }
 //Stars Container
 
