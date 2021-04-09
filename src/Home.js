@@ -4,11 +4,14 @@ import {Provider} from './context';
 import Main from './Components/Layout/Main'
 import MovieDetails from './Components/Movies/MovieDetails';
 import ShowDetails from './Components/TVShows/ShowDetails';
+import Star from './Components/Layout/Star'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 
 class Home extends Component {
+  
     render() {
+     
         return (
           <Provider>
             <Router>
@@ -26,6 +29,11 @@ class Home extends Component {
                     exact
                     path="/ShowDetails/:id"
                     component={ShowDetails}
+                  />
+                  <Route
+                    exact
+                    path="/**/Star/:id"
+                    component={Star}
                   />
                 </Switch>
               </div>

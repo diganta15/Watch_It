@@ -18,8 +18,12 @@ class MovieDetails extends Component {
   }
 
   render() {
-      
+        const lastIndex = this.props.location.pathname.lastIndexOf('/')
+        const url = this.props.location.pathname.substring(1,lastIndex);
+        
+
       const {
+        id,
         fullTitle,
         year,
         releaseDate,
@@ -31,9 +35,11 @@ class MovieDetails extends Component {
         tagline,
         imDbRating
       } = this.state.data;
+     
     return (
       <div>
         <Container
+          key={id}
           fullTitle={fullTitle}
           year={year}
           releaseDate={releaseDate}
@@ -44,6 +50,7 @@ class MovieDetails extends Component {
           actorList={actorList}
           tagline={tagline}
           imDbRating={imDbRating}
+          url={url}
         />
       </div>
     );

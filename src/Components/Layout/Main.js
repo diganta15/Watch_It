@@ -28,7 +28,9 @@ class Main extends Component {
                       ))}
                     </div>
                   </div>
+
                   <div className="most-popular-tv">
+                    <h1>Most Popular TV Shows</h1>
                     <div className="container">
                       {ShowName.map((item) => (
                         <Display

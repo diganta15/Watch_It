@@ -1,5 +1,6 @@
 import React from "react";
-import Star from "../Layout/Stars";
+import Stars from "../Layout/Stars";
+
 
 
 const Container = ({
@@ -12,7 +13,8 @@ const Container = ({
   stars,
   actorList,
   tagline,
-  imDbRating
+  imDbRating,
+  url
 }) => {
   // const [actorList, setactorList] = useState([]);
 
@@ -44,11 +46,13 @@ const Container = ({
           </div>
           <div className="showcase-bottom">
             {actorList.map((actor) => (
-              <Star
-              id={actor.id}
+              <Stars
+                id={actor.id}
                 name={actor.name}
                 image={actor.image}
+                type={"movies"}
                 as={actor.asCharacter}
+                url={url}
               />
             ))}
           </div>
